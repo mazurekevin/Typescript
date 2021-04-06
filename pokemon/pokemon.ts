@@ -1,0 +1,3 @@
+class pokemon{
+    name = 'test';
+}
