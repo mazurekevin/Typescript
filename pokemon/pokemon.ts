@@ -4,4 +4,5 @@ export class Pokemon{
     constructor(name: string){
         this.name = name;
     }
+
 }
