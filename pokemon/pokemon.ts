@@ -17,5 +17,4 @@ if(pok1.speed>pok2.speed){
 }else{
     return pok1;
 }
-
 }
