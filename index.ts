@@ -1,7 +1,16 @@
-import {Pokemon} from "./pokemon/pokemon";
+import {firstattack, Pokemon} from "./pokemon/pokemon";
 
-const pokemon = new Pokemon(
+const p1 = new Pokemon(
     "salameche",
+    42,
 );
 
-console.log(pokemon.name)
+const p2 = new Pokemon(
+    "carapuce",
+    50,
+);
+
+const res = firstattack(p1,p2);
+
+console.log(res)
+
