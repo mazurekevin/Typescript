@@ -8,7 +8,7 @@ const p1 = new Pokemon(
 
 const p2 = new Pokemon(
     "carapuce",
-    50,
+    60,
     100
 );
 
@@ -17,6 +17,6 @@ let res = firstattack(p1,p2);
 
 const vict = fight(p1,p2,res)
 
-console.log(vict)
+
 
 

@@ -3,11 +3,13 @@ import {firstattack, Pokemon} from "../pokemon";
 /*const p1 = new Pokemon(
     "salameche",
     50,
+    90
 );
 
 const p2 = new Pokemon(
     "carapuce",
     50,
+    100
 );
 
 test('p1>p2',()=>{
