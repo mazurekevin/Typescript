@@ -1,16 +1,22 @@
-import {firstattack, Pokemon} from "./pokemon/pokemon";
+import {fight, firstattack, Pokemon} from "./pokemon/pokemon";
 
 const p1 = new Pokemon(
     "salameche",
-    42,
+    55,
+    90
 );
 
 const p2 = new Pokemon(
     "carapuce",
     50,
+    100
 );
 
-const res = firstattack(p1,p2);
 
-console.log(res)
+let res = firstattack(p1,p2);
+
+const vict = fight(p1,p2,res)
+
+console.log(vict)
+
 

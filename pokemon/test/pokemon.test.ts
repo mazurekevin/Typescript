@@ -1,8 +1,8 @@
 import {firstattack, Pokemon} from "../pokemon";
 
-const p1 = new Pokemon(
+/*const p1 = new Pokemon(
     "salameche",
-    42,
+    50,
 );
 
 const p2 = new Pokemon(
@@ -21,4 +21,4 @@ test('p1<p2',()=>{
 test('p1==p2',()=>{
     expect(firstattack(p1, p2)).toBe(p1);
 })
-
+*/
