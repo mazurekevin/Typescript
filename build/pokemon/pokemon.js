@@ -54,7 +54,13 @@ function firstattack(pok1, pok2) {
         return pok2.name;
     }
     else {
-        return pok1.name;
+        var i = getRandom(0, 1);
+        if (i == 0) {
+            return pok1.name;
+        }
+        else {
+            return pok2.name;
+        }
     }
 }
 exports.firstattack = firstattack;
@@ -70,7 +76,7 @@ function fight(pok1, pok2, attack) {
                 case 1:
                     if (!(i != 1)) return [3 /*break*/, 6];
                     if (!(name == pok1.name)) return [3 /*break*/, 3];
-                    pok2.pv = pok2.pv - 20;
+                    pok2.pv = pok2.pv - getRandom(20, 50);
                     name = pok2.name;
                     console.log(pok1.name + " possède encore " + pok1.pv + " de points de vie.");
                     console.log(pok2.name + " possède encore " + pok2.pv + " de points de vie.\n");
@@ -80,7 +86,7 @@ function fight(pok1, pok2, attack) {
                     return [3 /*break*/, 5];
                 case 3:
                     if (!(name == pok2.name)) return [3 /*break*/, 5];
-                    pok1.pv = pok1.pv - 20;
+                    pok1.pv = pok1.pv - getRandom(20, 50);
                     name = pok1.name;
                     console.log(pok1.name + " possède encore " + pok1.pv + " de points de vie.");
                     console.log(pok2.name + " possède encore " + pok2.pv + " de points de vie.\n");
@@ -106,4 +112,9 @@ function fight(pok1, pok2, attack) {
 exports.fight = fight;
 function delay(ms) {
     return new Promise(function (resolve) { return setTimeout(resolve, ms); });
+}
+function getRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
