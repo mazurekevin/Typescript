@@ -9,8 +9,9 @@
   <button (click)="break()">Pause</button><br><br>
 
   <br>Logs :<br>
+
   <ng-template ngFor let-item [ngForOf]="log" let-i="index">
-    {{log[i]}}<br>
+    {{log[i]}}{{now|date :'hh:mm:ss'}}<br>
   </ng-template>
   <ng-template [ngIf]="pok1PV === 0 || pok2PV === 0">
     <div style="color: red">{{lose}}</div>
