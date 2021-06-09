@@ -1,6 +1,3 @@
-import {promises} from "dns";
-
-
 export class Pokemon{
     name: string;
     speed: number;
