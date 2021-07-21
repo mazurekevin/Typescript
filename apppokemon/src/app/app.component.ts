@@ -49,7 +49,6 @@ export class AppComponent {
         name = this.pokemon2.name;
         this.pok1PV = 0;
       }
-
       this.log.push(this.pokemon1.name + " possède encore " + this.pok1PV + " de points de vie.\n");
       this.log.push(this.pokemon2.name + " possède encore " + this.pok2PV + " de points de vie.\n");
     }
