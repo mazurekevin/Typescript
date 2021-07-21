@@ -10,9 +10,9 @@ export class AppComponent {
   title = 'apppokemon';
   now =  new Date();
 
-  pokemon1: Pokemon = new Pokemon("Dracaufeu", 100, 78);
+  pokemon1: Pokemon = new Pokemon("Dracaufeu", 100, 150);
   pok1PV: number = this.pokemon1.pv;
-  pokemon2: Pokemon = new Pokemon("Trousselin", 75, 57);
+  pokemon2: Pokemon = new Pokemon("Trousselin", 75, 100);
   pok2PV: number = this.pokemon2.pv;
   attack: string = this.pokemon1.speed > this.pokemon2.speed ? this.pokemon1.name : this.pokemon2.name;
 
@@ -30,6 +30,7 @@ export class AppComponent {
         name = this.pokemon2.name;
         console.log(this.pokemon1.name + " possède encore " + this.pok1PV + " de points de vie.")
         console.log(this.pokemon2.name + " possède encore " + this.pok2PV + " de points de vie.\n")
+        await delay(1000);
       } else if (name == this.pokemon2.name) {
         this.pok1PV -= getRandom(20,50);
         name = this.pokemon1.name;
