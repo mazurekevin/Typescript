@@ -6,19 +6,11 @@ import {Pokemon} from "../../../../pokemon/pokemon";
   templateUrl: "pokemon1.component.html",
   styleUrls: ['./pokemon1.component.css']
 })
-export class Pokemon1Component implements OnInit {
+export class Pokemon1Component {
   pokemon: Pokemon = new Pokemon("Test", 5, 50);
   static pokemon: Pokemon;
 
   constructor() {
-  }
-
-  ngOnInit(): void {
-
-  }
-
-  displayName() {
-
   }
 
 }

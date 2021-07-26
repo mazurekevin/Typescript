@@ -5,7 +5,19 @@
   padding: 12px 40px;
   border-radius: 12px;
   transition: all 0.5s;
-  margin-left: 1300px;
+  /*margin-left: 1300px;*/
+  position: absolute;
+}
+
+.button2 {
+  background: #555555;
+  color: white;
+  font-size: 20px;
+  padding: 12px 40px;
+  border-radius: 12px;
+  transition: all 0.5s;
+  /*margin-left: 1290px;*/
+  margin-top: 150px;
   position: absolute;
 }
 
@@ -16,6 +28,14 @@
 }
 
 .button:hover {
+  background: white;
+  color: #555555;
+  font-size: 20px;
+  padding: 12px 40px;
+  border-radius: 12px;
+}
+
+.button2:hover {
   background: white;
   color: #555555;
   font-size: 20px;

@@ -1,20 +1,26 @@
 <div class="background">
   <app-pokemon1 class="anime"></app-pokemon1>
-  <p class="text disposeFirst">{{pokemon1.name}}</p>
   <app-pokemon2 class="anime"></app-pokemon2>
-  <p class="text disposeSecond">{{pokemon2.name}}</p>
 
   <br><br>
-  <button (click)="fightPoke()" class="button">Fight</button><br>
-<!--  <button (click)="break()" class="button">Pause</button><br><br>-->
+  <button (click)="pokemonService.fightPoke(pokemons[0], pokemons[1])" class="button">Fight</button><br>
+  <!-- <button (click)="pokemonService.break()" class="button2">Pause</button><br><br> -->
 
   <div class="logs">
     <br>Logs :<br>
-    <ng-template ngFor let-item [ngForOf]="log" let-i="index">
-      {{log[i]}}<br>
+    Date de début du combat : {{now|date :'hh:mm:ss'}}<br><br>
+    <ng-template ngFor let-item [ngForOf]="pokemonService.log" let-i="index">
+      {{pokemonService.log[i]}}
+      <ng-template [ngIf]="pokemonService.log[i].split(' ')[0] === pokemons[0].name">
+        ({{pokemonService.calculDmg(pokemons[0], pokemonService.log[i].split(" ")[3])}} dégâts de pris)<br>
+      </ng-template>
+
+      <ng-template [ngIf]="pokemonService.log[i].split(' ')[0] === pokemons[1].name">
+        ({{pokemonService.calculDmg(pokemons[1], pokemonService.log[i].split(" ")[3])}} dégâts de pris)<br><br>
+      </ng-template>
     </ng-template>
-    <ng-template [ngIf]="pok1PV === 0 || pok2PV === 0">
-      <div style="color: red">{{lose}}</div>
+    <ng-template [ngIf]="pokemonService.pok1PV === 0 || pokemonService.pok2PV === 0">
+      <div style="color: red">{{pokemonService.lose}}</div>
     </ng-template>
   </div>
 </div>
