@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .button {
   background: #555555;
   color: white;
@@ -5,8 +10,16 @@
   padding: 12px 40px;
   border-radius: 12px;
   transition: all 0.5s;
-  /*margin-left: 1300px;*/
+  margin-left: 1300px;
   position: absolute;
+}
+
+.orange {
+  color: orange;
+}
+
+.blue {
+  color: blue;
 }
 
 .button2 {
@@ -16,7 +29,7 @@
   padding: 12px 40px;
   border-radius: 12px;
   transition: all 0.5s;
-  /*margin-left: 1290px;*/
+  margin-left: 1290px;
   margin-top: 150px;
   position: absolute;
 }

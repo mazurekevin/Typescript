@@ -24,10 +24,10 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-    this.pokemonService.apiCallPokemon1().subscribe(data => {
+    this.pokemonService.apiCallPokemon2().subscribe(data => {
       this.pokemons.push(new Pokemon(data.name, data.speed, data.pv))
     });
-    this.pokemonService.apiCallPokemon2().subscribe(data => {
+    this.pokemonService.apiCallPokemon1().subscribe(data => {
       this.pokemons.push(new Pokemon(data.name, data.speed, data.pv))
     });
     console.log(this.pokemons)
